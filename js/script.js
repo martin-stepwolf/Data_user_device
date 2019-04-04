@@ -45,17 +45,17 @@ $(function () {
           screenSize += '' + width + " x " + height;
       }
      // var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
-  $("#sisop").val(navigator.platform);
-  $("#versionsisop").val(navigator.userAgent);
-  $("#navegadorop").val(navigator.appCodeName);
-  $("#versionnavegador").val(navigator.appVersion);
-  $("#resoluc").val(screenSize);
-  $("#profund").val(screen.colorDepth);
-  $("#idioma").val(navigator.language);
-  $("#zonhor").val(utc);
-  $("#orien").val();
-  $("#toscr").val();
-  $("#typedis").val();
+  $("#sisop").text(navigator.platform);
+  $("#versionsisop").text(navigator.userAgent);
+  $("#navegadorop").text(navigator.appCodeName);
+  $("#versionnavegador").text(navigator.appVersion);
+  $("#resoluc").text(screenSize);
+  $("#profund").text(screen.colorDepth);
+  $("#idioma").text(navigator.language);
+  $("#zonhor").text(utc);
+  $("#orien").text();
+  $("#toscr").text();
+  $("#typedis").text();
 });
 
 
