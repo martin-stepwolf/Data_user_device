@@ -87,9 +87,10 @@
             majorVersion = parseInt(navigator.appVersion, 10);
         }
 
-        // mobile version
-        var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
-
+        // device version
+        var device = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
+        if(device = "false")
+        device = "Pc";
         // cookie
         var cookieEnabled = (navigator.cookieEnabled) ? true : false;
 
@@ -177,7 +178,7 @@
         browser: browser,
         browserVersion: version,
         browserMajorVersion: majorVersion,
-        mobile: mobile,
+        device: device,
         os: os,
         osVersion: osVersion,
         cookies: cookieEnabled,
@@ -185,11 +186,11 @@
     };
 }(this));
 
-alert(
+console.log(
     'OS: ' + jscd.os +' '+ jscd.osVersion + '\n' +
     'Browser: ' + jscd.browser +' '+ jscd.browserMajorVersion +
       ' (' + jscd.browserVersion + ')\n' + 
-    'Mobile: ' + jscd.mobile + '\n' +
+    'device: ' + jscd.device + '\n' +
     'Flash: ' + jscd.flashVersion + '\n' +
     'Cookies: ' + jscd.cookies + '\n' +
     'Screen Size: ' + jscd.screen + '\n\n' +

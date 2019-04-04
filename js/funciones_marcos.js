@@ -15,15 +15,15 @@ $(document).ready(function() {
           screenSize += '' + width + " x " + height;
       }
      // var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
-  $("#sisop").text(navigator.platform);
-  $("#versionsisop").text(navigator.userAgent);
-  $("#navegadorop").text(navigator.appCodeName);
-  $("#versionnavegador").text(navigator.appVersion);
+  $("#sisop").text(jscd.os);
+  $("#versionsisop").text(jscd.osVersion);
+  $("#navegadorop").text(jscd.browser);
+  $("#versionnavegador").text(jscd.browserVersion);
   $("#resoluc").text(screenSize);
   $("#profund").text(screen.colorDepth);
   $("#idioma").text(navigator.language);
   $("#zonhor").text(utc);
   $("#orien").text();
   $("#toscr").text();
-  $("#typedis").text();
+  $("#typedis").text(jscd.device);
 });
