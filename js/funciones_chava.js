@@ -8,10 +8,15 @@
 
         // screen
         var screenSize = '';
+        var orientation = '';
         if (screen.width) {
             width = (screen.width) ? screen.width : '';
             height = (screen.height) ? screen.height : '';
             screenSize += '' + width + " x " + height;
+            if(width>height)
+            orientation = "Vertical";
+            else
+            orientation = "Horizontal";
         }
 
         // browser
@@ -90,7 +95,9 @@
         // device version
         var device = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
         if(device = "false")
-        device = "Pc";
+        device = "Desktop";
+        else
+        device = "Mobile";
         // cookie
         var cookieEnabled = (navigator.cookieEnabled) ? true : false;
 
@@ -182,7 +189,8 @@
         os: os,
         osVersion: osVersion,
         cookies: cookieEnabled,
-        flashVersion: flashVersion
+        flashVersion: flashVersion,
+        orientation: orientation
     };
 }(this));
 

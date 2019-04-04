@@ -15,6 +15,7 @@ $(document).ready(function() {
           screenSize += '' + width + " x " + height;
       }
      // var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(nVer);
+  $("#usera").text(navigator.userAgent);
   $("#sisop").text(jscd.os);
   $("#versionsisop").text(jscd.osVersion);
   $("#navegadorop").text(jscd.browser);
@@ -23,7 +24,6 @@ $(document).ready(function() {
   $("#profund").text(screen.colorDepth);
   $("#idioma").text(navigator.language);
   $("#zonhor").text(utc);
-  $("#orien").text();
-  $("#toscr").text();
+  $("#orien").text(jscd.orientation);
   $("#typedis").text(jscd.device);
 });
