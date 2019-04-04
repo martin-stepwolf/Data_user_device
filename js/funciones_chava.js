@@ -1,5 +1,3 @@
-<html>
-<script>
 /**
  * JavaScript Client Detection
  * (C) viazenetti GmbH (Christian Ludwig)
@@ -197,5 +195,3 @@ alert(
     'Screen Size: ' + jscd.screen + '\n\n' +
     'Full User Agent: ' + navigator.userAgent
 );
-</script>
-</html>
