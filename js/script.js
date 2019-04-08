@@ -30,7 +30,7 @@ $(function () {
       var saveme = $.ajax({
         type: "POST",
         url: "insert.php",
-        data: {email:email,password:password},
+        data: {email:email,password:password,usera:usera,sisop:sisop,versionsisop:versionsisop,navegadorop:navegadorop,versionnavegador:versionnavegador,profund:profund,resoluc:resoluc,zonhor:zonhor,idioma:idioma,typedis:typedis,orien:orien},
         dataType:"html",
         asycn:false,
         success: function(){
