@@ -1,28 +1,43 @@
 
 $(function () {
     $('button').click(function () {
-      var sisop = $('#sisop').val();
-      var versionsisop = $('#versionsisop').val();
-      var navegadorop = $('#navegadorop').val();
-      var versionnavegador = $('#versionnavegador').val();
-      var resoluc = $('#resoluc').val();
-      var profund = $('#profund').val();
-      var idioma = $('#idioma').val();
-      var zonhor = $('#zonhor').val();
-      var orien = $('#orien').val();
-      var toscr = $('#toscr').val();
-      var typedis = $('#typedis').val();
-      var user = $('#user').val();
-      var pass = $('#pass').val();
-      console.log('starting ajax');
-      $.ajax({
+
+    var usera = $('#usera').val();
+    var sisop = $('#sisop').val();
+    var versionsisop = $('#versionsisop').val();
+    var navegadorop = $('#navegadorop').val();
+    var versionnavegador = $('#versionnavegador').val();
+    var profund = $('#profund').val();
+    var resoluc = $('#resoluc').val();
+    var zonhor = $('#zonhor').val();
+    var idioma = $('#idioma').val();
+    var typedis = $('#typedis').val();
+    var orien = $('#orien').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+   
+      console.log('ajax');
+      /*$.ajax({
         url: "insert.php",
-        type: "POST",
-        data: { sisop: sisop, versionsisop: versionsisop, navegadorop: navegadorop, versionnavegador: versionnavegador, resoluc: resoluc, profund: profund, idioma: idioma, zonhor: zonhor, orien: orien, toscr: toscr, typedis: typedis, user: user, pass: pass},
+        type: "post",
+        data: { sisop2: sisop, versionsisop2: versionsisop, navegadorop2: navegadorop, versionnavegador2: versionnavegador, resoluc2: resoluc, profund2: profund, idioma2: idioma, zonhor2: zonhor, orien2: orien, toscr2: toscr, typedis2: typedis, user2: user, pass2: pass},
         success: function (data) {
           var dataParsed = JSON.parse(data);
           console.log(dataParsed);
         }
-      });
+      });*/
+
+      var saveme = $.ajax({
+        type: "POST",
+        url: "insert.php",
+        data: {email:email,password:password},
+        dataType:"html",
+        asycn:false,
+        success: function(){
+           console.log("Ha sido ejecutada la acción.");
+        }
+}).responseText;
+console.log(saveme);
+
+});
     });
-  });

@@ -65,12 +65,12 @@
           <center><h2>Sign up</h2></center>
         </div>
         <div class="col-6">
-          <b for="gender">User</b>
-          <input type="text" id="user">
+          <b for="email">Email</b>
+          <input type="email" id="email">
         </div>
         <div class="col-6">
-          <b for="gender">Password</b>
-          <input type="password" id="pass">
+          <b for="password">Password</b>
+          <input type="password" id="password">
         </div>
         <div class="col-12">
           <center><button type="submit" class="btn btn-default">Submit</button></center>
